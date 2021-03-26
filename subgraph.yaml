@@ -1,14 +1,14 @@
 specVersion: 0.0.2
-description: PancakeSwap is a decentralized protocol for automated token exchange on Binance Smart Chain.
-repository: https://github.com/pancakeswap/pancakeswap-v2-subgraph
+description: IgniSwap is a decentralized protocol for automated token exchange on Binance Smart Chain.
+repository: https://github.com/igniswap/igniswap-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: bsc
     source:
-      address: '0xBCfCcbde45cE874adCB698cC183deBcF17952812'
+      address: '0x5f76c63aAcA37ABDBcbFF0Ce67A1b8560ACDcbE7'
       abi: Factory
       startBlock: 586851
     mapping:
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: mainnet
+    network: bsc
     source:
       abi: Pair
     mapping:
